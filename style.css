@@ -1,0 +1,138 @@
+    /* Reset dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7f6;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Styling Header */
+    header {
+        background-color: #2c3e50;
+        color: #ffffff;
+        text-align: center;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+    }
+
+    header p {
+        font-style: italic;
+        color: #1abc9c;
+        font-weight: bold;
+    }
+
+    /* Container Utama */
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Bagian Tentang Kami */
+    .about {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .section-title {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid #1abc9c;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    /* Container Anggota (Flexbox) */
+    .members {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+
+    /* Kartu Anggota */
+    .member-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        width: calc(25% - 20px); /* 4 kolom */
+        min-width: 180px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .member-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Styling Avatar Bulat */
+    .avatar {
+        width: 70px;
+        height: 70px;
+        background-color: #1abc9c;
+        color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0 auto 15px auto;
+        box-shadow: 0 2px 5px rgba(26, 188, 156, 0.4);
+    }
+
+    .member-card h3 {
+        font-size: 1.1rem;
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+
+    .member-card p {
+        font-size: 0.9rem;
+        color: #7f8c8d;
+    }
+
+    /* Styling Footer */
+    footer {
+        text-align: center;
+        padding: 1.5rem 0;
+        background-color: #ecf0f1;
+        color: #7f8c8d;
+        font-size: 0.9rem;
+        margin-top: 2rem;
+        border-top: 1px solid #bdc3c7;
+    }
+
+    /* Responsif untuk layar kecil (HP) */
+    @media (max-width: 768px) {
+        .member-card {
+            width: calc(50% - 20px); /* 2 kolom di tablet/HP */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .member-card {
+            width: 100%; /* 1 kolom di HP kecil */
+        }
+    }
